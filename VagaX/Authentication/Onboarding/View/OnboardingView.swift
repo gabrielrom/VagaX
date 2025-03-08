@@ -50,13 +50,7 @@ struct OnboardingView: View {
         }
         .padding(.horizontal, 22)
         .background(
-            VStack {
-                Image(.imageBackgroundElipses)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-                Image(.imageBackgroundBoxes)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-            }
-            .ignoresSafeArea()
+            BackgroundView()
         )
     }
 }
