@@ -4,7 +4,7 @@ import SwiftUI
 struct VagaXApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            LoginView()
         }
     }
 }

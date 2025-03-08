@@ -3,13 +3,13 @@ import SwiftUI
 struct RectangularPlainButton: ButtonStyle {
     let font: Font
     let textColor: Color
-    let height: CGFloat
+    let height: CGFloat?
     let width: CGFloat?
     
     init(
         font: Font = .poppinsNormalSemiBold,
         textColor: Color = .primaryBlack,
-        height: CGFloat = 60,
+        height: CGFloat? = nil,
         width: CGFloat? = nil
     ) {
         self.font = font
@@ -20,9 +20,14 @@ struct RectangularPlainButton: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding()
-            .frame(maxWidth: width ?? .infinity, maxHeight: height)
+            .frame(maxWidth: width, maxHeight: height)
             .font(font)
             .foregroundStyle(textColor)
     }
+}
+
+#Preview {
+    Button("Hello") {}
+        .buttonStyle(RectangularPlainButton())
+    
 }

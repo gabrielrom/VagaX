@@ -30,7 +30,13 @@ struct RectangularRoundedButton: ButtonStyle {
             .frame(maxWidth: width ?? .infinity, maxHeight: height)
             .font(font)
             .foregroundStyle(textColor)
-            .background(backgroundColor)
+            .background(configuration.isPressed ? backgroundColor.opacity(0.8) : backgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
     }
+}
+
+#Preview {
+    Button("Hello") {}
+        .padding()
+        .buttonStyle(RectangularRoundedButton())
 }

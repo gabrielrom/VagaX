@@ -34,7 +34,7 @@ struct OnboardingView: View {
             Spacer()
             
             Button("Register") {}
-                .buttonStyle(RectangularPlainButton())
+                .buttonStyle(RectangularPlainButton(height: 60, width: .infinity))
         }
     }
     
